@@ -37,9 +37,9 @@ clear;
 	Global_ChannelFactor	通道因子
 	Global_Scale	缩尺比
 %}
-Global_Distance = 293	% <全局>测量点之间距离(毫米)
-Global_ChannelFactor = 0.05	% <全局>通道因子
-Global_Scale = 50	% <全局>缩尺比
+Global_Distance = 293;	% <全局>测量点之间距离(毫米)
+Global_ChannelFactor = 0.05;	% <全局>通道因子
+Global_Scale = 50;	% <全局>缩尺比
 
 %% 读取数据文件列表
 %{
@@ -92,12 +92,12 @@ fprintf('\n');
 %}
 DataFileValidCount = 0;	% 初始化有效的数据文件数
 DataFileValidList = {};	% 初始化有效的数据文件列表
-All_Data_DisplacementMean = []	% 初始化位移平均值
-All_Data_DisplacementStD = []	% 初始化位移标准差
-All_Data_RotationMean = []	% 初始化扭转平均值
-All_Data_RotationStD = []	% 初始化扭转标准差
-All_Data_VerticalAmplitude = []	% 初始化竖向振幅
-All_Data_RotationAmplitude = []	% 初始化扭转振幅
+All_Data_DisplacementMean = [];	% 初始化位移平均值
+All_Data_DisplacementStD = [];	% 初始化位移标准差
+All_Data_RotationMean = [];	% 初始化扭转平均值
+All_Data_RotationStD = [];	% 初始化扭转标准差
+All_Data_VerticalAmplitude = [];	% 初始化竖向振幅
+All_Data_RotationAmplitude = [];	% 初始化扭转振幅
 while ~feof(ListFile)
 	DataFileName = fscanf(ListFile,'%s',[1]);	% 读取数据文件
 	if ~strcmp(DataFileName,'')
